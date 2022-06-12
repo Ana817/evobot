@@ -1,11 +1,13 @@
 /**
  * Module Imports
  */
+require("dotenv").config();
 const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
 const { join } = require("path");
 const { TOKEN, PREFIX } = require("./util/Util");
 const i18n = require("./util/i18n");
+client.login(process.env.BOT_TOKEN)
 
 const client = new Client({
   disableMentions: "everyone",
